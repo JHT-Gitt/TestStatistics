@@ -4,9 +4,9 @@ public class Main {
     public static void main(String[] args) {
 
         int[] testScore = {
-                95,98,99,90,85,83,89,91,87,100
+                95,98,99,90,85,83,89,91,75,100
         };
-        int sum = 0, highScore = 0,lowScore = 0;
+        int sum = 0, highScore = testScore[0],lowScore = testScore[0];
         int average, medianValue, midNumber=0;
 
         for( int total : testScore ){
@@ -18,10 +18,11 @@ public class Main {
             }
         }
         for(int a = 1 ; a < testScore.length ; a++){
-            if(testScore[a] < highScore){
+            if(testScore[a] < lowScore){
                 lowScore = testScore[a];
             }
         }
+
         midNumber = testScore.length / 2;
         midNumber = testScore[midNumber];
         average = sum / testScore.length;
